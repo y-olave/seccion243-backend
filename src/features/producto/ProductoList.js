@@ -2,6 +2,7 @@ import React from 'react'
 import Producto from './Producto'
 import { Row, Col } from 'antd'
 import './ProductoList.css'
+
 const ProductoList = () => {
     return (
         <Row gutter={16}>
