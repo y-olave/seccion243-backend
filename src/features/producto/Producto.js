@@ -3,7 +3,7 @@ import { Avatar, Card } from 'antd';
 import React from 'react';
 const { Meta } = Card;
 
-const Producto = () => (
+const Producto = (props) => (
   <Card
     style={{
       width: 300,
@@ -22,7 +22,7 @@ const Producto = () => (
   >
     <Meta
       avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-      title="Card title"
+      title={props.title}
       description="This is the description"
     />
   </Card>
