@@ -1,31 +1,38 @@
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { SettingOutlined } from '@ant-design/icons';
 import { Avatar, Card } from 'antd';
 import React from 'react';
+import ModificarDrawer from '../ModificarDrawer';
+import DetallesModal from '../DetallesModal';
 const { Meta } = Card;
 
-const Producto = () => (
-  <Card
-    style={{
-      width: 300,
-    }}
-    cover={
-      <img
+const Producto = (props) => {
+  return (
+    <Card
+      style={{
+        width: 300,
+      }}
+      cover={<img
         alt="example"
-        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+        src={props.valor.avatar}
+      />}
+      actions={[
+        <SettingOutlined/>,
+        <ModificarDrawer
+          avatar={<Avatar src={props.valor.avatar} />}
+          detalle={<img
+            alt="example"
+            src={props.valor.avatar}
+          />} />,
+        <DetallesModal/>,
+      ]}
+    >
+      <Meta
+        avatar={<Avatar src={props.valor.avatar} />}
+        title={props.valor.titulo}
+        description={props.valor.descripcion}
       />
-    }
-    actions={[
-      <SettingOutlined key="setting" />,
-      <EditOutlined key="edit" />,
-      <EllipsisOutlined key="ellipsis" />,
-    ]}
-  >
-    <Meta
-      avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-      title="Card title"
-      description="This is the description"
-    />
-  </Card>
-);
+    </Card>
+  )
+}
 
 export default Producto;
