@@ -16,6 +16,17 @@ const basedatos = [
     { key: "10", avatar: "https://joeschmoe.io/api/v1/10", detalle: "Detalle 29", titulo: "Titulo 33231" },
 ]
 const ProductoList = () => {
+    const handleEdit = () => {
+        basedatos.map( (elemento) => {
+            console.log(elemento)
+             return(
+                elemento
+            );
+        }
+      
+        )
+
+    }
     return (
         <Row gutter={16}>
             {
@@ -31,9 +42,10 @@ const ProductoList = () => {
                 //     ),
                 // )
                 basedatos.map(elemento => {
+                    console.log(elemento)
                     return(
                     <Col className="gutter-box" >
-                        <Producto valor={elemento} />
+                        <Producto valor={elemento} onClick={handleEdit} />
                     </Col>
                     )
                     

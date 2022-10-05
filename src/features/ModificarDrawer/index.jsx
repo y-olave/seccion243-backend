@@ -1,4 +1,4 @@
-import { Drawer } from 'antd';
+import { Drawer, Button, Input } from 'antd';
 import React, { useState } from 'react';
 import { EditOutlined} from '@ant-design/icons';
 
@@ -8,15 +8,16 @@ const ModificarDrawer = (props) => {
   const showDrawer = () => {
     setOpen(!open);
   };
-
+  console.log("DRAWER",props)
   return (
     <>
       <EditOutlined onClick={showDrawer}/>
       <Drawer title="Basic Drawer" placement="right" onClose={showDrawer} open={open}>
         {props.avatar}
-        <p><input /></p>
-        <p><input /></p>
-        {props.detalle}
+        <Input placeholder="Nombre" defaultValue={props.valor} />
+        <Input placeholder="Precio" defaultValue={props.valor} />
+        <Button type="primary">Guardar</Button>
+
       </Drawer>
     </>
   );
