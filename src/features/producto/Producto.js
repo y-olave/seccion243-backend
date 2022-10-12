@@ -13,13 +13,13 @@ const Producto = (props) => {
       }}
       cover={<img
         alt="example"
-        src={props.valor.avatar}
+        src={props.valor.imagen}
       />}
       actions={[
         <SettingOutlined/>,
         <ModificarDrawer
           valor={props.valor}
-          avatar={<Avatar src={props.valor.avatar} />}
+          avatar={<Avatar src={props.valor.imagen} />}
           detalle={<img
             alt="example"
             src={props.valor.avatar}
@@ -28,9 +28,9 @@ const Producto = (props) => {
       ]}
     >
       <Meta
-        avatar={<Avatar src={props.valor.avatar} />}
-        title={props.valor.titulo}
-        description={props.valor.descripcion}
+        avatar={<Avatar src={props.valor.imagen} />}
+        title={props.valor.nombre}
+        description={props.valor.precio}
       />
     </Card>
   )
