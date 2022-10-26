@@ -1,1 +1,7 @@
 node_modules
+**__pycache__
+db.sqlite3
+**.pyc
+sistemabackend/sistemabackend/__pycache__/settings.cpython-310.pyc
+sistemabackend/sistemabackend/__pycache__/urls.cpython-310.pyc
+sistemabackend/sistemabackend/__pycache__/wsgi.cpython-310.pyc
